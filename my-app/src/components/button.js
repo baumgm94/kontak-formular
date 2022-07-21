@@ -4,7 +4,7 @@ function SubmitButton({ buttonName, onSubmit }) {
     <div className="flex justify-center items-center">
       <button
         onClick={onSubmit}
-        className="w-36 h-12 m-8  rounded-lg shadow-md border-solid border-1 border-slate-900 bg-slate-50  hover:bg-slate-200"
+        className="text-white w-32 h-12 bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mt-3 mb-8 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
       >
         {buttonName}
       </button>
