@@ -31,16 +31,31 @@ function App() {
   }
 
   return (
-    <form ref={form} className="App shadow-xl  m-8 bg-[#FDFDFD] rounded-lg">
+    <form
+      ref={form}
+      onSubmit={sendEmail}
+      className="App shadow-xl  m-8 bg-[#FDFDFD] rounded-lg"
+    >
       <h2 className="text-7xl font-bold text-center mb-10 p-8 text-slate-700">
         Contact Form
       </h2>
-      <TextInput lableName="Firstname" name="firstName" placeholder="Max" />
-      <TextInput lableName="Lastname" name="lastName" placeholder="Muster" />
+      <TextInput
+        lableName="Firstname"
+        name="firstName"
+        placeholder="Max"
+        required
+      />
+      <TextInput
+        lableName="Lastname"
+        name="lastName"
+        placeholder="Muster"
+        required
+      />
       <TextInput
         lableName="E-Mail"
         name="eMail"
         placeholder="default@gmail.com"
+        required
       />
       <TextInput lableName="Mobile" name="mobile" placeholder="+41" />
       <TextArea
@@ -48,7 +63,7 @@ function App() {
         name="comment"
         placeHolder="Leave a comment ..."
       />
-      <SubmitButton buttonName="Submit" onSubmit={sendEmail} />
+      <SubmitButton buttonName="Submit" />
     </form>
   );
 }
